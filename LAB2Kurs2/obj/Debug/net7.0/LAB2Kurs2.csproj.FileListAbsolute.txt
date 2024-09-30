@@ -1,0 +1,14 @@
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\bin\Debug\net7.0\LAB2Kurs2.exe
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\bin\Debug\net7.0\LAB2Kurs2.deps.json
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\bin\Debug\net7.0\LAB2Kurs2.runtimeconfig.json
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\bin\Debug\net7.0\LAB2Kurs2.dll
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\bin\Debug\net7.0\LAB2Kurs2.pdb
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\obj\Debug\net7.0\LAB2Kurs2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\obj\Debug\net7.0\LAB2Kurs2.AssemblyInfoInputs.cache
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\obj\Debug\net7.0\LAB2Kurs2.AssemblyInfo.cs
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\obj\Debug\net7.0\LAB2Kurs2.csproj.CoreCompileInputs.cache
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\obj\Debug\net7.0\LAB2Kurs2.dll
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\obj\Debug\net7.0\refint\LAB2Kurs2.dll
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\obj\Debug\net7.0\LAB2Kurs2.pdb
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\obj\Debug\net7.0\LAB2Kurs2.genruntimeconfig.cache
+D:\Visual Studio\LAB2Kurs2\LAB2Kurs2\obj\Debug\net7.0\ref\LAB2Kurs2.dll

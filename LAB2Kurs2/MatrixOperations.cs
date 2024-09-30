@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LAB2Kurs2
 {
-    internal class MatrixOperations
+    partial class MyMatrix
     {
+
     }
 }
