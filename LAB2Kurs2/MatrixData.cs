@@ -78,19 +78,28 @@ namespace LAB2Kurs2
         public MyMatrix(string matrix)
         {
             int col = 0;
-            for(int i = 0; matrix.Split()[i] != "n"; i++)
-            {
-                col = i;
-            }
-            int row = matrix.Split('n', StringSplitOptions.RemoveEmptyEntries).Length/col;
-            this.matrix = new double[row,col];
-            for(int i = 0; i < row; i++)
+            while (matrix.Split()[col] != "n") col++;
+            string[] str = matrix.Split(new char[] { ' ', '\t', 'n' },
+                StringSplitOptions.RemoveEmptyEntries);
+            int row = str.Length / col;
+            this.matrix = new double[row, col];
+            /*for(int i = 0; i < row; i++)
             {
                 for(int j = 0; j < col; j++)
                 {
-                    this.matrix[i, j] = double.Parse(matrix.Split('n',
-                        StringSplitOptions.RemoveEmptyEntries)[i * j]);
+                    this.matrix[i, j]= double.Parse(str[i+j+2*i]);
                 }
+            }*/
+            int j = 0;
+            for (int i = 0; i < row; i++)
+            {
+                do
+                {
+                    this.matrix[i,j%col] = double.Parse(str[j]);
+                    j++;
+                }
+                while (j < col*(i+1));
+
             }
         }
 
