@@ -74,5 +74,17 @@ namespace LAB2Kurs2
             }
             return tmatrix;
         }
+
+        public MyMatrix GetTransponedCopy(MyMatrix m)
+        {
+            MyMatrix tm = new MyMatrix();
+            tm.matrix = GetTransponedArray(m);
+            return tm;
+        }
+
+        public void TransponeMe()
+        {
+            this.matrix = GetTransponedArray(this);
+        }
     }
 }
