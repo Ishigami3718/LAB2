@@ -35,10 +35,10 @@ namespace LAB2Kurs2
                 mres.matrix = new double[m1.Heigth, m2.Weidth];
                 for (int i = 0; i < m1.Heigth; i++)
                 {
-                    double sum = 0;
                     for (int j = 0; j < m2.Weidth; j++)
                     {
-                        for(int k = 0; k < m1.Weidth;k++)
+                        double sum = 0;
+                        for (int k = 0; k < m1.Weidth;k++)
                         {
                             sum += m1[i, k] * m2[k, j];
                         }
