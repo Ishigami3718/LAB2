@@ -135,5 +135,17 @@ namespace LAB2Kurs2
             }
         }
 
+        public double this[int i,int j]
+        {
+            get 
+            {
+                return this.matrix[i, j]; 
+            }
+            set 
+            {
+                if (value <= double.MaxValue && value >= double.MinValue)
+                    this.matrix[i,j]=value;
+            }
+        }
     }
 }
