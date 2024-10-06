@@ -53,24 +53,14 @@ namespace LAB2Kurs2
         private double[,] GetTransponedArray(MyMatrix m)
         {
             double[,] tmatrix = new double[m.Weidth, m.Heigth];
-            double[] temp = new double[m.Weidth];
+            double[,] temp= new double[m.Heigth,m.Weidth];
+            Array.Copy(m.matrix, temp, m.matrix.Length);
             for(int i = 0; i < m.Weidth; i++)
             {
-                for (int k = 0; k < temp.Length; k++)
+                for(int j = 0; j < m.Heigth; j++)
                 {
-                    temp[k] = matrix[i, k];
+                    tmatrix[i, j] = temp[j,i];
                 }
-
-                for (int j = 0; j < m.Heigth; j++)
-                {
-                    tmatrix[i, j] = m[j,i];
-                }
-                  
-                for(int p = 0; p < m.Weidth; p++)
-                {
-                    tmatrix[p, i] = temp[p];
-                }
-                temp = null;
             }
             return tmatrix;
         }
