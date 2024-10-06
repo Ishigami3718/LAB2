@@ -118,5 +118,22 @@ namespace LAB2Kurs2
             }
             return result;
         }
+
+        public int Heigth
+        {
+            get
+            {
+                return matrix.GetLength(0);
+            }
+        }
+
+        public int Weidth
+        {
+            get
+            {
+                return matrix.GetLength(1);
+            }
+        }
+
     }
 }
