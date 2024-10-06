@@ -49,5 +49,30 @@ namespace LAB2Kurs2
             }
             else throw new Exception("Different cols and rows sizes");
         }
+
+        private double[,] GetTransponedArray(MyMatrix m)
+        {
+            double[,] tmatrix = new double[m.Weidth, m.Heigth];
+            double[] temp = new double[m.Weidth];
+            for(int i = 0; i < m.Weidth; i++)
+            {
+                for (int k = 0; k < temp.Length; k++)
+                {
+                    temp[k] = matrix[i, k];
+                }
+
+                for (int j = 0; j < m.Heigth; j++)
+                {
+                    tmatrix[i, j] = m[j,i];
+                }
+                  
+                for(int p = 0; p < m.Weidth; p++)
+                {
+                    tmatrix[p, i] = temp[p];
+                }
+                temp = null;
+            }
+            return tmatrix;
+        }
     }
 }
