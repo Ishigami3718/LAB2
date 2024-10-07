@@ -10,20 +10,21 @@ namespace LAB2Kurs2
     {
         private double[,] matrix;
 
-        public MyMatrix() { }
+       // public MyMatrix() { }
 
         public MyMatrix(MyMatrix matrix)
         {
-            int row = matrix.matrix.GetLength(0);
-            int col = matrix.matrix.GetLength(1);
-            this.matrix = new double[row, col];
+          /*  int row = matrix.matrix.GetLength(0);
+            int col = matrix.matrix.GetLength(1);*/
+            this.matrix = (double[,])matrix.matrix.Clone();
+           /* this.matrix = new double[row, col];
             for (int i = 0; i < row; i++)
             {
                 for(int j = 0; j < col; j++)
                 {
                     this.matrix[i,j] = matrix.matrix[i, j];
                 }
-            }
+            }*/
         }
 
         public MyMatrix(double[,] matrix)
