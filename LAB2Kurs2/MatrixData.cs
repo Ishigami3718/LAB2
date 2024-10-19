@@ -10,7 +10,7 @@ namespace LAB2Kurs2
     {
         private double[,] matrix;
 
-       // public MyMatrix() { }
+        private MyMatrix() { }
 
         public MyMatrix(MyMatrix matrix)
         {
@@ -29,7 +29,7 @@ namespace LAB2Kurs2
 
         public MyMatrix(double[,] matrix)
         {
-            int row = matrix.GetLength(0);
+           /* int row = matrix.GetLength(0);
             int col = matrix.GetLength(1);
             this.matrix = new double[row, col];
             for (int i = 0; i < row; i++)
@@ -38,7 +38,8 @@ namespace LAB2Kurs2
                 {
                     this.matrix[i, j] = matrix[i, j];
                 }
-            }
+            }*/
+           this.matrix = (double[,])matrix.Clone();
         }
 
         public MyMatrix(double[][] matrix)
@@ -62,9 +63,10 @@ namespace LAB2Kurs2
             }
         }
 
-        public MyMatrix(string[] matrix)
+        public MyMatrix(string[] matrix):this(Array.ConvertAll(matrix,
+            s =>Array.ConvertAll(s.Split(new char[] { ' ','\t'},StringSplitOptions.RemoveEmptyEntries),double.Parse)))
         {
-            int row = matrix.Length;
+            /*int row = matrix.Length;
             int col = matrix[0].Split().Length;
             this.matrix = new double[row,col];
             for (int i = 0; i < row; i++)
@@ -73,24 +75,17 @@ namespace LAB2Kurs2
                 {
                     this.matrix[i, j] = double.Parse(matrix[i].Split()[j]);
                 }
-            }
+            }*/
         }
 
-        public MyMatrix(string matrix)
+        public MyMatrix(string matrix):this(matrix.Split("\n",StringSplitOptions.RemoveEmptyEntries))
         {
-            int col = 0;
-            while (matrix.Split()[col] != "n") col++;
-            string[] str = matrix.Split(new char[] { ' ', '\t', 'n' },
+            /*int col = 0;
+            while (matrix.Split()[col] != "\n") col++;
+            string[] str = matrix.Split(new char[] { ' ', '\t', '\n' },
                 StringSplitOptions.RemoveEmptyEntries);
             int row = str.Length / col;
             this.matrix = new double[row, col];
-            /*for(int i = 0; i < row; i++)
-            {
-                for(int j = 0; j < col; j++)
-                {
-                    this.matrix[i, j]= double.Parse(str[i+j+2*i]);
-                }
-            }*/
             int j = 0;
             for (int i = 0; i < row; i++)
             {
@@ -101,7 +96,7 @@ namespace LAB2Kurs2
                 }
                 while (j < col*(i+1));
 
-            }
+            }*/
         }
 
         public override string ToString()
